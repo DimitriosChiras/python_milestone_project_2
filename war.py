@@ -7,6 +7,9 @@
 ## 5iii) if a player runs out of cards during war, then they lose.
 ## 6) WIN CONDITION: one player has gathered all of the cards
 
+import random 
+values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8, 
+            'Nine':9, 'Ten':10, 'Jack':11, 'Queen':12, 'King':13, 'Ace':14}
 # Card class: it should:
 # 1) Understand the suit of the card (hearts, diamonds clubs), 2) rank (1,2,3....king)
 # and 3) an easy-to-use integer value corresponding to that rank so that we can compare 
@@ -17,13 +20,15 @@ class Card:
 # and rank of the card (the value we don't need as it will be calcullated from a dictionary)
     def __init__(self,suit,rank):
         self.suit=suit
-        self.rank=rank  
+        self.rank=rank
+        self.value=values[rank]#Note, not self.rank: inside the instatiation we are already passing "rank"
+
     def __str__(self):
         return self.rank + " of " + self.suit #Assumes that rank and suit passed in are strings
 
-two_hearts = Card("hearts","Two")
 
-print(two_hearts)
+
+
 
 
 
