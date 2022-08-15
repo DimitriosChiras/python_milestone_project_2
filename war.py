@@ -54,7 +54,10 @@ class Deck:
         random.shuffle(self.all_cards)
         #Note that random.shuffle doesn't return anything, it does the shuffling in place, 
         #meaning that it can't be assigned; I just want to know that the deck is shuffled
-        
+    
+         
+    def deal_one(self):
+        return self.all_cards.pop()
                 
         
 
